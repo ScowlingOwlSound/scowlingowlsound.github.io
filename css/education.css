@@ -6,7 +6,7 @@
   -ms-animation: fadeIn2 ease 12s;
   animation-delay: 2s;
 }
-@keyframes fadeIn2 {
+@keyframes fadeIn {
   0% {
     opacity:0;
   }
@@ -15,7 +15,7 @@
   }
 }
 
-@-moz-keyframes fadeIn2 {
+@-moz-keyframes fadeIn {
   0% {
     opacity:0;
   }
@@ -24,7 +24,7 @@
   }
 }
 
-@-webkit-keyframes fadeIn2 {
+@-webkit-keyframes fadeIn {
   0% {
     opacity:0;
   }
@@ -33,7 +33,7 @@
   }
 }
 
-@-o-keyframes fadeIn2 {
+@-o-keyframes fadeIn {
   0% {
     opacity:0;
   }
@@ -42,7 +42,7 @@
   }
 }
 
-@-ms-keyframes fadeIn2 {
+@-ms-keyframes fadeIn {
   0% {
     opacity:0;
   }
