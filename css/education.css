@@ -4,6 +4,8 @@
   -moz-animation: fadeIn ease 12s;
   -o-animation: fadeIn ease 12s;
   -ms-animation: fadeIn ease 12s;
+  position:absolute, right: 10px;
+  border: 50px;
 }
 @keyframes fadeIn {
   0% {
