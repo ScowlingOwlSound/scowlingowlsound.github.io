@@ -3,7 +3,8 @@ h1 {
   font-family: helvetica;
   color: white;
   opacity: 0.8;
-  text-align: center;
+  left: 50%;
+  top: 50%;
 }
 #webcam-container {
   opacity:0.0;
