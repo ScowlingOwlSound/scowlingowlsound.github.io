@@ -7,11 +7,11 @@
   <div class="fade-in" align="center">
   <center><h1>David Weaver, for Art Processors.</h1>
 
-  <p>In the spirit of Art Processors, I thought I'd provide a companion app, for my application for the position of Digital Producer.<br>
-For this, you'll need a webcam. If you can, please read this letter on a computer with a webcam, and allow access when prompted.</p>
+  <p>In the spirit of Art Processors, I thought I'd provide a companion app for my application for the position of Digital Producer.<br>
+For this, you'll need a webcam. If you can, please read this cover letter on a computer with a webcam, and allow access when prompted.</p>
 <p>If you don't have a webcam, <a href="./coverletter.html">click here</a>;
   You'll miss out on some of the fancy stuff though.</p>
-<button type="button" onclick="init()">Explore.</button></center></div>
+<button type="button" onclick="init()">Continue.</button></center></div>
 
 <script>
 </script>
@@ -56,15 +56,14 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
 
     // run the webcam image through the image model
     async function predict() {
-        // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
             var classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
-        if(prediction[3].className == 1.0){
-        console.log(prediction[3]);
+        if(prediction == 1.0){
+        console.log(prediction[i] == 1.0);
       }
     }
 
