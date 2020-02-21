@@ -4,13 +4,7 @@
   -moz-animation: fadeIn ease 10s;
   -o-animation: fadeIn ease 10s;
   -ms-animation: fadeIn ease 10s;
-}
-.fade-in2 {
-  animation: fadeIn2 ease 12s;
-  -webkit-animation: fadeIn2 ease 12s;
-  -moz-animation: fadeIn2 ease 12s;
-  -o-animation: fadeIn2 ease 12s;
-  -ms-animation: fadeIn2 ease 12s;
+  position:absolute, right: 10px;
 }
 @keyframes fadeIn {
   0% {
@@ -56,7 +50,13 @@
     opacity:1;
   }
 }
-
+.fade-in2 {
+  animation: fadeIn2 ease 12s;
+  -webkit-animation: fadeIn2 ease 12s;
+  -moz-animation: fadeIn2 ease 12s;
+  -o-animation: fadeIn2 ease 12s;
+  -ms-animation: fadeIn2 ease 12s;
+}
 @keyframes fadeIn2 {
   0% {
     opacity:0;
