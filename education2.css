@@ -48,14 +48,14 @@
   }
   100% {
     opacity:1;
+  }
 }
-
 p {
-  font-family: Futura;
-}
-<h1> {
   font-style: italic;
   font-family: helvetica;
+}
+<h1> {
+  font-family: Futura;
 }
 <h2> {
   font-family: helvetica;
