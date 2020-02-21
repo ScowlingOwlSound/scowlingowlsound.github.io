@@ -1,10 +1,9 @@
 .fade-in {
-  animation: fadeIn2 ease 12s;
-  -webkit-animation: fadeIn2 ease 12s;
-  -moz-animation: fadeIn2 ease 12s;
-  -o-animation: fadeIn2 ease 12s;
-  -ms-animation: fadeIn2 ease 12s;
-  animation-delay: 2s;
+  animation: fadeIn ease 12s;
+  -webkit-animation: fadeIn ease 12s;
+  -moz-animation: fadeIn ease 12s;
+  -o-animation: fadeIn ease 12s;
+  -ms-animation: fadeIn ease 12s;
 }
 @keyframes fadeIn {
   0% {
