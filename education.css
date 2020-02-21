@@ -55,5 +55,9 @@ p {
   font-family: Futura;
 }
 <h1> {
-  font-family: Helvetica;
+  font-style: italic;
+  font-family: helvetica;
+}
+<h2> {
+  font-family: helvetica;
 }
