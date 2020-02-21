@@ -4,6 +4,7 @@ h1 {
   font-family: Futura;
   color: white;
   opacity: 0.8;
+  text-align: center;
 }
 body {background-color: black;}
 p {
