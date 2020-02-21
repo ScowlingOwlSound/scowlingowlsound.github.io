@@ -1,0 +1,63 @@
+.fade-in2 {
+  animation: fadeIn2 ease 13s;
+  -webkit-animation: fadeIn2 ease 13s;
+  -moz-animation: fadeIn2 ease 13s;
+  -o-animation: fadeIn2 ease 13s;
+  -ms-animation: fadeIn2 ease 13s;
+  position:absolute, right: 13px;
+  border: 50px;
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+p {
+  font-family: Futura;
+}
+<h1> {
+  font-style: italic;
+  font-family: helvetica;
+}
+<h2> {
+  font-family: helvetica;
+}
