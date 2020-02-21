@@ -6,6 +6,7 @@
   -ms-animation: fadeIn2 ease 13s;
   position:absolute, right: 13px;
   border: 50px;
+  animation-delay: 2s;
 }
 @keyframes fadeIn2 {
   0% {
