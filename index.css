@@ -1,5 +1,7 @@
 h1 {
-  position: relative center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
   font-size: 48px;
   font-family: Futura;
   color: white;
