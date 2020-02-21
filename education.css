@@ -5,6 +5,7 @@
   -o-animation: fadeIn ease 10s;
   -ms-animation: fadeIn ease 10s;
   position:absolute, right: 10px;
+  border: 50px;
 }
 @keyframes fadeIn {
   0% {
