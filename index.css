@@ -1,5 +1,7 @@
 h1 {
   position: relative center;
+  font-size: 48px;
+  font-family: Futura;
 }
 .button {
   display: inline-block;
