@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="./index.css">
 </head>
-<div>Teachable Machine Image Model</div>
+<div>David Weaver, for Art Processors.</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
 <div id="label-container"></div>
@@ -32,7 +32,7 @@
 
         // Convenience function to setup a webcam
         const flip = true; // whether to flip the webcam
-        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        //webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
