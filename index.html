@@ -62,9 +62,11 @@ For this, you'll need a webcam. If you can, please read this cover letter on a c
             var classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
-            if(labelContainer.childNodes[i].innerHTML > 0.9){
-            console.log(labelContainer.childNodes[i].innerHTML);
-            }
+            if(classPrediction > 0.9){
+            console.log(classPrediction);
+          } else {
+
+          }
         }
 
     }
