@@ -1,0 +1,50 @@
+.fade-in2 {
+  animation: fadeIn2 ease 12s;
+  -webkit-animation: fadeIn2 ease 12s;
+  -moz-animation: fadeIn2 ease 12s;
+  -o-animation: fadeIn2 ease 12s;
+  -ms-animation: fadeIn2 ease 12s;
+}
+@keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn2 {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+}
