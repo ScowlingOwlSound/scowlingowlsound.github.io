@@ -9,7 +9,7 @@
   width: 300px;
   border: 3px solid #ffffff;
 }
-button {
+a.button {
   background: #000;
   position: center;
   font-size: 48px;
@@ -21,35 +21,4 @@ button {
   height: 200px;
   margin: 20px auto;
   position: relative;
-}
-
-#stuff {
-  opacity: 0.0;
-  -webkit-transition: all 600ms ease-in-out;
-  -moz-transition: all 600ms ease-in-out;
-  -ms-transition: all 600ms ease-in-out;
-  -o-transition: all 600ms ease-in-out;
-  transition: all 600ms ease-in-out;
-  color: white;
-  text-align: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ffffff;
-  border-radius: 25px;
-  width: 200px;
-}
-
-#hover {
-  width: 150px;
-  height: 10px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  float: center;
-  font-family: 'Open Sans', FontAwesome;
-  font-weight: 600;
-}
-
-#hover:hover+#stuff {
-  opacity: 1.0;
-  display: inline-block;
 }
