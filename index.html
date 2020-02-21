@@ -3,8 +3,8 @@
 <head>
   <link rel="stylesheet" href="./index.css">
 </head>
-<div><h1>David Weaver, for Art Processors.</h1></div>
-<div><p>I've been inspired by Art Processors. <br>
+<div><h1>David Weaver, for Art Processors.</h1>
+  <p>I've been inspired by Art Processors. <br>
  I've been to MONA and I remember being blown away by the companion app.<br>
 I am so excited by the Thought of working with you that I thought I'd approach my Cover Letter a little differently.<br>
 For this, you'll need a webcam. If you can, please read this letter on a computer with a webcam, and allow access when prompted.</p>
@@ -31,7 +31,7 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
         maxPredictions = model.getTotalClasses();
 
         const flip = true; // flip the webcam
-        webcam = new tmImage.Webcam(10, 10, flip); // width, height, flip
+        webcam = new tmImage.Webcam(800, 800, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);

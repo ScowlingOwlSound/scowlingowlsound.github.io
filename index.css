@@ -1,7 +1,5 @@
 h1 {
   position: absolute;
-  left: 50%;
-  top: 50%;
   font-size: 48px;
   font-family: Futura;
   color: white;
@@ -19,7 +17,7 @@ button {
   border-style: double;
   border-color:white;
   border-width:3px;
-  color: black;
+  color: white;
   text-align: center;
   font-size: 28px;
   padding: 20px;
