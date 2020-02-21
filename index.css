@@ -1,5 +1,4 @@
 h1 {
-  position: absolute;
   font-size: 48px;
   font-family: Futura;
   color: white;
@@ -10,6 +9,9 @@ p {
   color:white;
   opacity:0.7;
 }
+#centeredStuff{
+  text-align:center;
+}
 button {
   display: inline-block;
   border-radius: 4px;
@@ -18,16 +20,12 @@ button {
   border-color:white;
   border-width:3px;
   color: white;
-  text-align: center;
   font-size: 28px;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
 }
 
 .fade-in {
