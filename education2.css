@@ -4,6 +4,7 @@
   -moz-animation: fadeIn2 ease 12s;
   -o-animation: fadeIn2 ease 12s;
   -ms-animation: fadeIn2 ease 12s;
+  animation-delay: 2s;
 }
 @keyframes fadeIn2 {
   0% {
@@ -47,4 +48,11 @@
   }
   100% {
     opacity:1;
+}
+
+p {
+  font-family: Futura;
+}
+<h1> {
+  font-family: Helvetica;
 }
