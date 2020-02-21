@@ -1,6 +1,6 @@
 h1 {
   font-size: 48px;
-  font-family: monospace;
+  font-family: helvetica;
   color: white;
   opacity: 0.8;
   text-align: center;
@@ -12,7 +12,7 @@ body {background-color: black;}
 p {
   color:white;
   opacity:0.7;
-  font-family: monospace;
+  font-family: helvetica;
 }
 button {
   display: inline-block;
@@ -23,7 +23,7 @@ button {
   border-width:7px;
   color: white;
   font-size: 28px;
-  font-family: monospace;
+  font-family: helvetica;
   padding: 20px;
   width: 200px;
   transition: all 0.5s;
