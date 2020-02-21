@@ -33,7 +33,7 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
         maxPredictions = model.getTotalClasses();
 
         const flip = true; // flip the webcam
-        webcam = new tmImage.Webcam(0, 0, flip); // width, height, flip
+        webcam = new tmImage.Webcam(10, 10, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
         await webcam.play();
         window.requestAnimationFrame(loop);
