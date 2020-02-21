@@ -1,34 +1,24 @@
 
 #resumeTitle {
   position: fixed;
+  background: #000;
+  font-style: italic;
+  font-family: helvetica;
   bottom: 0;
   right: 0;
   width: 300px;
   border: 3px solid #ffffff;
 }
-
+button {
+  background: #000;
+  position: center;
+  font-size: 48px;
+  font-style: italic;
+  font-family: helvetica;
+}
 .slider {
   max-width: 300px;
   height: 200px;
   margin: 20px auto;
   position: relative;
-}
-.slide1 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.slide1 {
-  background: url(http://media.dunkedcdn.com/assets/prod/40946/580x0-9_cropped_1371566801_p17tbs0rrjqdt1u4dnk94fe4b63.jpg)no-repeat center;
-      background-size: cover;
-    animation:fade 8s;
--webkit-animation:fade 8s;
-
-}
-@keyframes fade
-{
-  100%   {opacity:1}
-  66.333% { opacity: 0}
-  33.666% { opacity: 0}
-  0% { opacity: 1}
 }

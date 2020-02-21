@@ -10,9 +10,9 @@
       <source src="butterflyRock.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
-      <center><h1>David Weaver</h1></center>
-
-      <button onclick="hideShowSliders()">Explore</button>
+        <center>
+            <button onclick="hideShowSliders()">Explore</button>
+        </center>
       <p id="resumeTitle"><em>David Weaver, for Art Processors</em></p>
 <!--Sliders -->
     <div class="slidecontainer1">
@@ -26,13 +26,7 @@
       <input type="range" min="1" max="100" value="50" class ="slider" id="sliderThree">
     </div>
   -->
-<!--Image Reveals-->
-    <div class='slider'>
-      <div class='slide1'></div>
-      <div class='slide2'></div>
-      <div class='slide3'></div>
-    </div>
-    <script>
+  <script>
 
     function hideShowSliders() {
       var x = document.getElementById("slidecontainer1");
