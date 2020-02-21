@@ -30,11 +30,11 @@ button {
   -ms-transition: all 600ms ease-in-out;
   -o-transition: all 600ms ease-in-out;
   transition: all 600ms ease-in-out;
-  color: black;
+  color: white;
   text-align: center;
   border-style: solid;
   border-width: 1px;
-  border-color: #e0e0e0;
+  border-color: #ffffff;
   border-radius: 25px;
   width: 200px;
 }
