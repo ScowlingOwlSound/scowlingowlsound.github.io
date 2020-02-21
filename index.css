@@ -11,9 +11,6 @@ p {
   opacity:0.7;
   font-family: monospace;
 }
-#centeredStuff{
-  text-align:center;
-}
 button {
   display: inline-block;
   border-radius: 4px;
