@@ -61,18 +61,13 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         for (let i = 0; i < maxPredictions; i++) {
-            const classPrediction =
+            var classPrediction =
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
+        console.log(prediction);
     }
-</script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("div").find("Rhand").css({"color": "red", "border": "2px solid red"});
-});
 </script>
 
 
