@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="./index.css">
-</head>
-
-<script>
 <div>Teachable Machine Image Model</div>
 <button type="button" onclick="init()">Start</button>
 <div id="webcam-container"></div>
@@ -16,7 +9,7 @@
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/3Q2Fyu3r/";
+    const URL = "./my_model/";
 
     let model, webcam, labelContainer, maxPredictions;
 
@@ -64,5 +57,3 @@
         }
     }
 </script>
-
-</html>
