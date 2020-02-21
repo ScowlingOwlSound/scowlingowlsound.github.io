@@ -65,11 +65,12 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
+        if (className = "Rhand" > 0.8 )
+        {
+          console.log("yes");
+        }
     }
-    if (className = "Rhand" )
-    {
-      console.log("yes");
-    }
+
 </script>
 
 
