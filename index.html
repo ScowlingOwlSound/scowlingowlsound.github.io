@@ -2,20 +2,18 @@
 <html>
 <head>
   <link rel="stylesheet" href="./index.css">
-
 </head>
-
   <body>
       <video autoplay muted loop id="backgroundVideo">
       <source src="butterflyRock.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
         <center>
-            <button onclick="hideShowSliders()">Explore</button>
+            <button id="hover" onclick="hideShowSliders()">Explore</button>
         </center>
       <p id="resumeTitle"><em>David Weaver, for Art Processors</em></p>
 <!--Sliders -->
-    <div class="slidecontainer1">
+    <div id="stuff">
       <input type="range" min="1" max="100" value="50" class ="slider" id="sliderOne">
     </div>
     <!--
@@ -26,16 +24,5 @@
       <input type="range" min="1" max="100" value="50" class ="slider" id="sliderThree">
     </div>
   -->
-  <script>
-
-    function hideShowSliders() {
-      var x = document.getElementById("slidecontainer1");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
-        x.style.display = "none";
-      }
-    }
-    </script>
   </body>
 </html>
