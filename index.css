@@ -15,6 +15,12 @@ p {
   opacity:0.7;
   font-family: helvetica;
 }
+p:active {
+  color:white;
+}
+p:visited{
+  colour:white;
+}
 button {
   display: inline-block;
   border-radius: 4px;
