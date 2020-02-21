@@ -16,6 +16,22 @@ For this, you'll need a webcam. If you can, please read this letter on a compute
 <p>If you don't have a webcam, <a href="./coverletter.html">click here</a>;
   You'll miss out on some of the fancy stuff though.</p>
 <button type="button" onclick="init()">Explore.</button></center></div>
+<div class="box1"></div><br/>
+
+<script>
+$('span').click(function () {
+    var boxNumber = $(this).index('span') + 1;
+    if ($(this).hasClass('shown')) {
+        $(this).removeClass('shown');
+        $(this).html('Show');
+        $('.box' + boxNumber).fadeIn(1000);
+    } else {
+        $(this).html('Hide');
+        $(this).addClass('shown');
+        $('.box' + boxNumber).fadeOut(1000);
+    }
+});
+</script>
 
 <div id="webcam-container"></div>
 <div id="label-container"></div>
