@@ -8,7 +8,11 @@
 <script>
 $(document).ready(function(){
   $(".btn1").click(function(){
-    $("p").fadeOut();
+    $("p").fadeOut(2500);
+  $("h1").animate({
+        top: "+=80%",
+        left: "+=40",
+        marginLeft: "0.6in", opcaity: 0.9 },1500);
   });
   $(".btn2").click(function(){
     $("p").fadeIn();
