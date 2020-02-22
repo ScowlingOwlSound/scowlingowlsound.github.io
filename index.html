@@ -9,6 +9,11 @@
 $(document).ready(function(){
   $(".btn1").click(function(){
     $("#text1").fadeOut(2500);
+    $("#text2").fadeOut(2800);
+    $("#text3").fadeOut(3000);
+    $("#text4").fadeOut(3200);
+    $("#text5").fadeOut(3500);
+
     $("button").fadeOut(2500);
   $("h1").animate({
         top: "-=80%",
@@ -47,15 +52,15 @@ $(document).ready(function(){
 
   <p id="text1">In the spirit of Art Processors, I thought I'd provide a companion app for my application for the position of Digital Producer.<br>
 For this, you'll need a webcam. If you can, please read this cover letter on a computer with a webcam, and allow access when prompted.</p>
-<p id="text1"><em>A Quick Breakdown</em></p>
-<p id="text1">I've used Machine Learning through Google's Teachable Machine and Tensorflow.js to track hand positions.<br>
+<p id="text2"><em>A Quick Breakdown</em></p>
+<p id="text3">I've used Machine Learning through Google's Teachable Machine and Tensorflow.js to track hand positions.<br>
   You'll use this hand position input to reveal various parts of my cover letter, on the next screen.<br>
   The Audio has been built with Howler.js.
   <br>New layers will be added as you complete each gesture.
   <br>I've kept the model relatively lightweight, as I wanted to put in my application and only had a day or so to script all this up.</p>
-<p id="text1">If you don't have a webcam, <a href="./coverletter.html">click here</a>;
+<p id="text4">If you don't have a webcam, <a href="./coverletter.html">click here</a>;
   You'll miss out on some of the fancy stuff though.</p>
-  <p id="text1">I hope you enjoy.</p>
+  <p id="text5">I hope you enjoy.</p>
   <!--Button for fading and continuing -->
 <button class="btn1" onclick="sound.play()">Continue.</button></center></div>
 
