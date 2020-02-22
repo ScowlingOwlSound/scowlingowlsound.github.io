@@ -27,7 +27,7 @@ $(document).ready(function(){
           top: "0%",
           left: "+=900",
           marginLeft: "1.7in", opacity: 0.9 },2500);
-    $("h1").delay(2500)fadeOut(2500);
+    $("h1").delay(2500).fadeOut(2500);
     $("#text6").delay(5000).fadeIn(2500);
 
 
@@ -116,7 +116,7 @@ Please check your Audio Output and Speakers.</p>
         document.getElementById("webcam-container").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
-            labelContainer.appendChild(document.createElement("div id="tensor""));
+            labelContainer.appendChild(document.createElement("div"));
         }
     }
 
