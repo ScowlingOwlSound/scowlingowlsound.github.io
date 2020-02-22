@@ -39,7 +39,8 @@ button {
 .image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 640px;
+  width: 480px;
 }
 
 .container {
