@@ -7,18 +7,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+  $( "#text1" ).hide();
+  $( "#text2" ).hide();
+  $( "#text3" ).hide();
+  $( "#text4" ).hide();
+  $( "#text5" ).hide();
+    $( "#text6" ).hide();
+  $( "#text7" ).hide();
+  $( "#text8" ).hide();
+  $( "#text9" ).hide();
+  $( "#text10" ).hide();
+
   $(".fade-in").fadeIn(2500);
   $( "#text1" ).delay(500).fadeIn(2500);
   $( "#text2" ).delay(1000).fadeIn(2500);
   $( "#text3" ).delay(1500).fadeIn(2500);
   $( "#text4" ).delay(2000).fadeIn(2500);
   $( "#text5" ).delay(2500).fadeIn(2500);
-  $( "#text6" ).hide();
-  $( "#text7" ).hide();
-  $( "#text8" ).hide();
-  $( "#text9" ).hide();
-  $( "#text10" ).hide();
-  $( ".container").hide();
+
   $(".btn1").click(function(){
     $("#text1").fadeOut(2500);
     $("#text2").fadeOut(2800);
