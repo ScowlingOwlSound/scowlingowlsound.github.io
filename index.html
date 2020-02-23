@@ -136,11 +136,12 @@ $(document).ready(function(){
     $( "#helptext2" ).delay(8000).fadeIn(2500);
     $( "#helptext3" ).delay(10000).fadeIn(2500);
     $( "#helptext4" ).delay(12000).fadeIn(2500);
-    $( "#helptext5" ).delay(14000).fadeIn(2500).promise(checkOneHand);
-    if(checkOneHand = true) {
-      console.log("YES");
-    } else {
-
+    $( "#helptext5" ).delay(14000).fadeIn(2500);
+    if (bh =0) {
+    checkTwo();
+    }
+    else {
+      break;
     }
   });
   $("#helptext5").click(function(){
