@@ -114,11 +114,11 @@
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
         $( "#helptext5" ).delay(14000).fadeIn(2500);
-        $("#helptext5").click(function(){
-          $( "#helptext6" ).delay(4000).fadeIn(2500);
-          $( "#helptext7" ).delay(8000).fadeIn(2500);
-          $( "#helptext8" ).delay(11000).fadeIn(2500);
-        }
+          $("#helptext5").click(function(){
+            $( "#helptext6" ).delay(4000).fadeIn(2500);
+            $( "#helptext7" ).delay(8000).fadeIn(2500);
+            $( "#helptext8" ).delay(11000).fadeIn(2500);
+          });
         function checkFlag() {
             if(window.bh != 2) {
                window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
@@ -137,15 +137,12 @@
         $( "#helptext7" ).delay(8000).fadeIn(2500);
         $( "#helptext8" ).delay(11000).fadeIn(2500);
         $("#helptext8").click(function(){
-          $( "#helptext9" ).delay(4000).fadeIn(2500);
-          $( "#helptext10" ).delay(8000).fadeIn(2500);
-          $( ".btn2").delay(4000).fadeIn(2500);
+          twoPointNinePage();
         }
         function checkFlag2() {
             if(window.bh != 1) {
                window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
             } else {
-              window.bh = 0;
               twoPointNinePage();
             }
         }
@@ -153,6 +150,7 @@
 
       }
       function twoPointNinePage(){
+        window.bh = 0;
         $( "#helptext9" ).delay(4000).fadeIn(2500);
         $( "#helptext10" ).delay(8000).fadeIn(2500);
         $( ".btn2").delay(4000).fadeIn(2500);
@@ -214,7 +212,7 @@
         $( "#cvtext3" ).delay(11000).fadeIn(2500);
         $("#cvtext3").click(function(){
           pageThreePart2();
-        }
+        });
 
         alertSound.play();
         function checkFlag3() {
@@ -234,7 +232,7 @@
         $( "#cvtext6" ).delay(11000).fadeIn(2500);
         $("#cvtext6").click(function(){
           pageThreePart3();
-        }
+        });
         alertSound2.play();
         function checkFlag4() {
             if(window.bh != 1) {
@@ -250,16 +248,6 @@
           $( "#cvtext7" ).delay(4000).fadeIn(2500);
           $( "#cvtext8" ).delay(8000).fadeIn(2500);
           $( "#cvtext9" ).delay(11000).fadeIn(2500);
-          alertSound.play();
-          function checkFlag5() {
-              if(window.bh != 2) {
-                 window.setTimeout(checkFlag5, 100); /* this checks the flag every 100 milliseconds*/
-              } else {
-                window.bh = 0;
-                pageThreePart4();
-              }
-          }
-          checkFlag5();
         }
 
       }
