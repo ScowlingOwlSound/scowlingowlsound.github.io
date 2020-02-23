@@ -97,7 +97,7 @@
       }
       function secondPage()
       {
-        bgSound.play();
+        backgroundSound.play();
         $("#text1").fadeOut(2200);
         $("#text2").fadeOut(2500);
         $("#text3").fadeOut(2800);
@@ -138,7 +138,7 @@
         $( "#helptext8" ).delay(11000).fadeIn(2500);
         $("#helptext8").click(function(){
           twoPointNinePage();
-        }
+        });
         function checkFlag2() {
             if(window.bh != 1) {
                window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
