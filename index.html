@@ -15,6 +15,8 @@
       var backgroundSound = new Howl({
         src: ['bgSound.wav']
       });
+      var bgSound = backgroundSound.play();
+
       var alertSound = new Howl({
         src: ['alert.wav']
       });
@@ -70,8 +72,9 @@ $(document).ready(function(){
     $( "#helptext2" ).delay(12000).fadeIn(2500);
     alertSound.play();
     $( "#helptext3" ).delay(15000).fadeIn(2500);
-    $( "#helptext4" ).delay(17000).fadeIn(2500);
-    $( "#helptext5" ).delay(19000).fadeIn(2500);
+    $( "#helptext4" ).delay(25000).fadeIn(2500);
+    $( "#helptext5" ).delay(28000).fadeIn(2500);
+    alertSound.play();
   });
   $("#text6").click(function(){
     $("#text7").fadeIn(2500);
@@ -80,7 +83,27 @@ $(document).ready(function(){
   $("#text8").click(function(){
     $("#text9").fadeIn(2500);
     $("#text10").delay(3000).fadeIn(2500);
-  })
+  });
+//other functions
+/*
+$("#helptext1").fadeOut(4100);
+$("#helptext2").fadeOut(3900);
+$("#helptext3").fadeOut(3700);
+$("#helptext4").fadeOut(3500);
+$("#helptext5").fadeOut(3300);
+$("#helptext6").fadeOut(3100);
+$("#helptext7").fadeOut(2900);
+$("#helptext8").fadeOut(2700);
+$("#helptext9").fadeOut(2500);
+sound.fade(0, 1, 4000, bgSound);
+$("#text6").fadeIn(2500);
+$("#text7").fadeIn(3000);
+$("#text8").fadeIn(3500);
+
+
+
+
+*/
 });
 </script>
 <!-- Font Scripts -->
