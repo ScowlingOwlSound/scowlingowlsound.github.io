@@ -33,7 +33,7 @@
       const URL = "https://teachablemachine.withgoogle.com/models/urcdnqNk/";
 
       let model, webcam, labelContainer, maxPredictions;
-      var bh = 2;
+      var bh = 3;
       // Load the image model and setup the webcam
       async function init() {
           const modelURL = URL + "model.json";
@@ -43,7 +43,7 @@
           maxPredictions = model.getTotalClasses();
 
           const flip = true; // flip the webcam
-          webcam = new tmImage.Webcam(640, 480, flip); // width, height, flip
+          webcam = new tmImage.Webcam(400, 400, flip); // width, height, flip
           await webcam.setup(); // request access to the webcam
           await webcam.play();
           window.requestAnimationFrame(loop);
@@ -71,8 +71,13 @@
                     window.bh = 1;
                   } else if (classPrediction.includes("No Hands: 1.00")) {
                     window.bh = 0;
+                  } else if (classPrediction.includes("LeftHand: 1.00")) {
+                    window.bh = 2;
+                  } else if (classPrediction.includes("RightHand: 1.00")) {
+                    window.bh = 2;
+                  }
                 };
-          }
+
       }
     </script>
 <!--Jquery fades -->
@@ -92,26 +97,33 @@
       }
       function secondPage()
       {
-        $("#text1").fadeOut(2500);
-        $("#text2").fadeOut(2800);
-        $("#text3").fadeOut(3000);
-        $("#text4").fadeOut(3200);
-        $("#text5").fadeOut(3500);
+        bgSound.play();
+        $("#text1").fadeOut(2200);
+        $("#text2").fadeOut(2500);
+        $("#text3").fadeOut(2800);
+        $("#text4").fadeOut(3000);
+        $("#text5").fadeOut(3200);
         $("button").hide();
         $("h1").animate({
               top: "0%",
               left: "+=900",
-              marginLeft: "1.7in", opacity: 0.9 },2500);
-        $("h1").delay(1000).fadeOut(2500);
-        $( "#helptext1" ).delay(4000).fadeIn(2500);
+              marginLeft: "1.7in", opacity: 0.9 },2000);
+        $("h1").delay(1000).fadeOut(2200);
+        $( "#helptext1" ).delay(6000).fadeIn(2500);
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
         $( "#helptext5" ).delay(14000).fadeIn(2500);
+        $("#helptext5").click(function(){
+          $( "#helptext6" ).delay(4000).fadeIn(2500);
+          $( "#helptext7" ).delay(8000).fadeIn(2500);
+          $( "#helptext8" ).delay(11000).fadeIn(2500);
+        }
         function checkFlag() {
-            if(window.bh != 1) {
+            if(window.bh != 2) {
                window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
             } else {
+              window.bh = 0;
               twoPointFivePage();
             }
         }
@@ -121,25 +133,34 @@
       }
       function twoPointFivePage()
       {
-        window.bh = 0;
         $( "#helptext6" ).delay(4000).fadeIn(2500);
         $( "#helptext7" ).delay(8000).fadeIn(2500);
+        $( "#helptext8" ).delay(11000).fadeIn(2500);
+        $("#helptext8").click(function(){
+          $( "#helptext9" ).delay(4000).fadeIn(2500);
+          $( "#helptext10" ).delay(8000).fadeIn(2500);
+          $( ".btn2").delay(4000).fadeIn(2500);
+        }
         function checkFlag2() {
             if(window.bh != 1) {
-               window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+               window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
             } else {
-              threePage();
+              window.bh = 0;
+              twoPointNinePage();
             }
-            checkFlag2();
         }
+        checkFlag2();
+
       }
-      function threePage(){
-        $( "#helptext8" ).delay(4000).fadeIn(2500);
-        $( "#helptext9" ).delay(8000).fadeIn(2500);
+      function twoPointNinePage(){
+        $( "#helptext9" ).delay(4000).fadeIn(2500);
+        $( "#helptext10" ).delay(8000).fadeIn(2500);
+        $( ".btn2").delay(4000).fadeIn(2500);
       }
+      //START
         $(document).ready(function(){
           init();
-          console.log("1.9");
+          console.log("THE WORKING VERSION");
           //Fade everything out to start from black
           $( ".btn1").hide();
           $( ".btn2").hide();
@@ -163,14 +184,91 @@
           $( "#helptext7" ).hide();
           $( "#helptext8" ).hide();
           $( "#helptext9" ).hide();
+          $( "#helptext10" ).hide();
+          $( "#cvtext1" ).hide();
+          $( "#cvtext2" ).hide();
+          $( "#cvtext3" ).hide();
+          $( "#cvtext4" ).hide();
+          $( "#cvtext5" ).hide();
+          $( "#cvtext6" ).hide();
+          $( "#cvtext7" ).hide();
+          $( "#cvtext8" ).hide();
+          $( "#cvtext9" ).hide();
+
           firstPage();
       });
+      function thirdPage(){
+        $("#helptext1").fadeOut(4000);
+        $("#helptext2").fadeOut(3800);
+        $("#helptext3").fadeOut(3600);
+        $("#helptext4").fadeOut(3400);
+        $("#helptext5").fadeOut(3200);
+        $("#helptext6").fadeOut(3000);
+        $("#helptext7").fadeOut(2800);
+        $("#helptext8").fadeOut(2600);
+        $("#helptext9").fadeOut(2400);
+        $("#helptext10").fadeOut(2200);
+        $(".btn2").fadeOut(4200);
+        $( "#cvtext1" ).delay(4000).fadeIn(2500);
+        $( "#cvtext2" ).delay(8000).fadeIn(2500);
+        $( "#cvtext3" ).delay(11000).fadeIn(2500);
+        $("#cvtext3").click(function(){
+          pageThreePart2();
+        }
+
+        alertSound.play();
+        function checkFlag3() {
+            if(window.bh != 2) {
+               window.setTimeout(checkFlag3, 100); /* this checks the flag every 100 milliseconds*/
+            } else {
+              pageThreePart2();
+            }
+        }
+        checkFlag3();
+      }
+
+      function pageThreePart2(){
+        window.bh = 0;
+        $( "#cvtext4" ).delay(4000).fadeIn(2500);
+        $( "#cvtext5" ).delay(8000).fadeIn(2500);
+        $( "#cvtext6" ).delay(11000).fadeIn(2500);
+        $("#cvtext6").click(function(){
+          pageThreePart3();
+        }
+        alertSound2.play();
+        function checkFlag4() {
+            if(window.bh != 1) {
+               window.setTimeout(checkFlag4, 100); /* this checks the flag every 100 milliseconds*/
+            } else {
+              window.bh = 0;
+              pageThreePart3();
+            }
+        }
+        checkFlag4();
+
+        function pageThreePart3(){
+          $( "#cvtext7" ).delay(4000).fadeIn(2500);
+          $( "#cvtext8" ).delay(8000).fadeIn(2500);
+          $( "#cvtext9" ).delay(11000).fadeIn(2500);
+          alertSound.play();
+          function checkFlag5() {
+              if(window.bh != 2) {
+                 window.setTimeout(checkFlag5, 100); /* this checks the flag every 100 milliseconds*/
+              } else {
+                window.bh = 0;
+                pageThreePart4();
+              }
+          }
+          checkFlag5();
+        }
+
+      }
       </script>
   </head>
   <body>
     <!------------------- START OF PAGE ONE --------------------->
     <div class="fade-in" align="center">
-      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
     <center><h1>David Weaver, for Art Processors.</h1>
       <p id="text1">In the spirit of Art Processors, I thought I'd provide a companion app for my application for the position of Digital Producer.<br>
     For this, you'll need a webcam. If you can, please read this cover letter on a computer with a webcam, and allow access when prompted.<br>
@@ -198,31 +296,64 @@
     <p id="helptext5">...</p>
     <p id="helptext6">Great work!</p>
     <p id="helptext7" onchange="alertSound2.play()">What do you think you do when you hear this sound twice?</p>
-    <p id="helptext8">Well done.</p>
-    <p id="helptext9">On with the show.</p>
+    <p id="helptext8">...</p>
+    <p id="helptext9">Well done.</p>
+    <p id="helptext10">On with the show.</p>
     <button class="btn2" onclick="alertSound.play(); thirdPage();">Continue.</button></center></div>
 
     </center>
     <!------------------- END OF PAGE TWO --------------------->
     <!------------------- START OF PAGE THREE --------------------->
 
-    <p id="text6">
+    <p id="cvtext1">
       I'm writing to you in interest of the position for Digital Producer at Arts Processors.<br>
       I’ve greatly enjoyed some of your work at MONA, and have always been interested in contributing to the design philosophy you hold with such high esteem. </p>
-    <p id="text7">
+    <p id="cvtext2">
       As a multidisciplinary artist, I’ve contributed audiovisual works to Melbourne Fringe Festival, the National Gallery of Victoria and Music Festivals (Panacea & Tilde Festival), in varying capacities. <br></p>
-    <p id="text8">
+    <p id="cvtext3">
       For Melbourne Fringe Festival, I produced the live electronics for ‘Eyes Wide Open’, a 40 minute interactive dance piece. <br>
       For this, I sourced the parts, cut, soldered and programmed Arduino components with accelerometers and gyroscopes to create a reactive component to the dancers. <br>
       This was piped over TouchOSC and a network to MaxMSP, where I developed the audio DSP for each dancer, dependant on the way they moved. <br>
       I worked closely with the Composer, Choreographer and HODs to ensure we delivered a tightly technical and creatively fulfilling product. <br>
       We were nominated for a Sound and Technical Excellence Award, and this work has developed into an ongoing partnership with members of the modern dance community in Melbourne from Chunky Move and Transit Dancehouse. <br></p>
-    <p id="text9">
+    <p id="cvtext4">
       My work with the National Gallery of Victoria involved creating adaptive visuals and projection mapping for an event for the Victorian Government for the 50th Anniversary of the Battle of Long Tanh. <br>
       In this project, I made presentations at Government House, and worked with autonomy to ensure both a high standard of excellence and technical sophistication through redundancies and systems engineering. <br>
       This work was presented to over 300 government officials and members of the public.
+    <p id="cvtext5">
+      Currently I am the Academic Coordinator at Abbey Road Institute Melbourne.<br>
+      I oversee the delivery of the Advanced Diploma of Music Industry, as well as several short courses to over a hundred students. <br>
+      I have also taken on the role of Campus Manager while the CEO is out of the office, managing the brand's social media accounts, developing content and interviews for masterclasses and Study For A Day as an initiative to pull traffic to the institute. <br>
+      For this I had to write, shoot, edit and deliver video content and content for socials, be they soundbites, posters and other assorted media. <br>
+      I did this while performing my duties as Academic Coordinator through the use of scheduled content and task management applications Slack, Later and Asana. <br>
+      I work with an international team regularly, as our organisational base is located in London, United Kingdom. <br></p>
+      <p id="cvtext6">
+      Recently, I’ve branched out in Machine Learning, Deep Learning for the process of Audio programming and Audio Classification for Acoustic Ecology.<br>
+      While my work in this field is only beginning, I am seeing great results that make the work interesting for stakeholders. <br>
+      This process continues a deep love of software, and I am experienced across multiple platforms, from the Adobe Creative Suite <br>
+      (specifically InDesign, Photoshop, Audition and, to my chagrin, a bit of After Effects), to CMS and LMS for my work maintaining clients as a freelancer.<br></p>
+      <p id="cvtext7">
+      As a freelancer, I have worked in film and television the last 7 years and have completed over 70 projects. <br>
+      I work as a Sound Designer but also see myself as an audio all-rounder, competent and confidant in talking to people of various background, from AAA games to independent short films. <br>
+      This work has exposed me to a variety of culturally significant elements of Australian life, and I am enamoured by the meeting of creative minds across sound for film, television, multimedia, games, podcasts and more.<br></p>
+      <p id="cvtext8">
+      During my tenure as Education Consultant at Future Music Australia, I maintained accounts across over 300 government schools and 35 private schools across Victoria.<br>
+      We provided detailed assistance, handled purchase orders and logistics management of deliveries.
+      I was a key member of the educational roll out of Avid’s Sibelius across those 300 government schools. <br>
+      We prepared and delivered introductory sessions and workshops to teachers at those schools, to prepare the changes in the Victorian Government Curriculum.<br>
+      I also developed clean marketing and product content, and audited our entire inventory through the CRM. <br></p>
+      <p id="cvtext9">
+        I am a detail oriented creative practitioner who is eager to learn and contribute. As a lover of the arts and creative technologies, I believe I would be of immense value to your organisation.<br>
+        I look forward to speaking with you, and I hope you enjoyed my hand gesture recognition task.<br>
+        <br>
+        You’ll find my work on my website, at www.scowlingowlsound.com.
+        <br>
+        Regards,
+        <br>
+        David
+        <br></p>
 
-      <!------------------- END OF PAGE TWO --------------------->
+      <!------------------- END OF PAGE THREE --------------------->
 
   </body>
 </html>

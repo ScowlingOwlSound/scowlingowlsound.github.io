@@ -2,8 +2,6 @@
 <html>
 <head>
   <!-- Tensorflow.js implementation -->
-  <script>
-  </script>
 
   <div id="webcam-container"></div>
   <div id="label-container"></div>
@@ -81,12 +79,6 @@
 <script>
 $(document).ready(function(){
   console.log("v1.4");
-  function checkTwo(){
-    if(window.bh == 1) {
-    $(".btn1").fadeIn(2500);
-  } else {
-    console.log("no")
-  }
 };
   //Fade everything out to start from black
   $( ".btn1").hide();
@@ -110,6 +102,7 @@ $(document).ready(function(){
   $( "#helptext7" ).hide();
   $( "#helptext8" ).hide();
   $( "#helptext9" ).hide();
+  
 
 //Fade Ins
   $(".fade-in").fadeIn(2500);
@@ -137,12 +130,6 @@ $(document).ready(function(){
     $( "#helptext3" ).delay(10000).fadeIn(2500);
     $( "#helptext4" ).delay(12000).fadeIn(2500);
     $( "#helptext5" ).delay(14000).fadeIn(2500);
-    if (bh =0) {
-    checkTwo();
-    }
-    else {
-
-    }
   });
   $("#helptext5").click(function(){
     $("#helptext9").fadeIn(5500);
