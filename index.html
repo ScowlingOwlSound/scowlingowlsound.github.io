@@ -122,7 +122,7 @@
               marginLeft: "1.7in", opacity: 0.9 },2000);
         $("h1").delay(1000).fadeOut(2200);
         $( "#helptext1" ).delay(6000).fadeIn(2500,function(){
-          alert3.play();
+          alertSound3.play();
         });
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
@@ -150,7 +150,7 @@
             $( "#helptext8" ).delay(6000).fadeIn(2500);
           });
               success.play();
-          
+
         function checkFlag() {
             if(window.bh != 2) {
                window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
@@ -178,24 +178,12 @@
             }
         }
         checkFlag2();
+}
 
-        $("#helptext8").click(function(){
-          twoPointNinePage();
-            success.play();
-        });
-        $("#helptext7").click(function(){
-          twoPointNinePage();
-            success.play();
-        });
-        $("#helptext6").click(function(){
-          twoPointNinePage();
-            success.play();
-        });
-      }
       function twoPointNinePage(){
         window.bh = 0;
         $( "#helptext9" ).delay(4000).fadeIn(2500,function(){
-          alert4.play();
+          alertSound4.play();
         });
         $( "#helptext10" ).delay(8000).fadeIn(2500);
         $( ".btn2").delay(4000).fadeIn(2500);
@@ -205,6 +193,18 @@
           init();
           console.log("THE WORKING VERSION.1");
           //Fade everything out to start from black
+          $("#helptext8").click(function(){
+            twoPointNinePage();
+              success.play();
+          });
+          $("#helptext7").click(function(){
+            twoPointNinePage();
+              success.play();
+          });
+          $("#helptext6").click(function(){
+            twoPointNinePage();
+              success.play();
+          });
           $( ".btn1").hide();
           $( ".btn2").hide();
           $( "#text1" ).hide();
@@ -252,7 +252,7 @@
         $("#helptext9").fadeOut(2400);
         $("#helptext10").fadeOut(2200);
         $(".btn2").fadeOut(4200);
-        $( "#cvtext1" ).delay(4000).fadeIn(2500,function(){alert3.play();});
+        $( "#cvtext1" ).delay(4000).fadeIn(2500,function(){alertSound3.play();});
         $( "#cvtext2" ).delay(8000).fadeIn(2500);
         $( "#cvtext3" ).delay(11000).fadeIn(2500, function(){
           alertSound.play();
