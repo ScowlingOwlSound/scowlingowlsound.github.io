@@ -128,10 +128,27 @@
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500, function(){alertSound.play()});
         $( "#helptext5" ).delay(14000).fadeIn(2500);
+
+          $("#helptext2").click(function(){
+            $( "#helptext6" ).delay(2000).fadeIn(2500);
+            $( "#helptext7" ).delay(4000).fadeIn(2500);
+            $( "#helptext8" ).delay(6000).fadeIn(2500);
+          }
+          $("#helptext3").click(function(){
+            $( "#helptext6" ).delay(2000).fadeIn(2500);
+            $( "#helptext7" ).delay(4000).fadeIn(2500);
+            $( "#helptext8" ).delay(6000).fadeIn(2500);
+          }
+          $("#helptext4").click(function(){
+            $( "#helptext6" ).delay(2000).fadeIn(2500);
+            $( "#helptext7" ).delay(4000).fadeIn(2500);
+            $( "#helptext8" ).delay(6000).fadeIn(2500);
+          }
           $("#helptext5").click(function(){
             $( "#helptext6" ).delay(2000).fadeIn(2500);
             $( "#helptext7" ).delay(4000).fadeIn(2500);
             $( "#helptext8" ).delay(6000).fadeIn(2500);
+          }
               success.play();
           });
         function checkFlag() {
@@ -151,7 +168,17 @@
         $( "#helptext6" ).delay(4000).fadeIn(2500);
         $( "#helptext7" ).delay(8000).fadeIn(2500,function(){alertSound2.play()});
         $( "#helptext8" ).delay(11000).fadeIn(2500);
-        
+
+        function checkFlag2() {
+            if(window.bh != 1) {
+               window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
+            } else {
+              success2.play();
+              twoPointNinePage();
+            }
+        }
+        checkFlag2();
+
         $("#helptext8").click(function(){
           twoPointNinePage();
             success.play();
@@ -164,17 +191,6 @@
           twoPointNinePage();
             success.play();
         });
-
-        function checkFlag2() {
-            if(window.bh != 1) {
-               window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
-            } else {
-              success2.play();
-              twoPointNinePage();
-            }
-        }
-        checkFlag2();
-
       }
       function twoPointNinePage(){
         window.bh = 0;
@@ -187,7 +203,7 @@
       //START
         $(document).ready(function(){
           init();
-          console.log("THE WORKING VERSION.0");
+          console.log("THE WORKING VERSION.1");
           //Fade everything out to start from black
           $( ".btn1").hide();
           $( ".btn2").hide();
