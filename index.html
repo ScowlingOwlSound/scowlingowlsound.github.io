@@ -51,7 +51,7 @@
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
               if(prediction[i].probability.toFixed(2) > 0.9){
-              console.log(classPrediction);
+              //console.log(classPrediction);
               //set the variables to values here.
             } else {
 
@@ -103,6 +103,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
+  console.log("v1.1");
   //Fade everything out to start from black
   $( ".btn1").hide();
   $( "#text1" ).hide();
@@ -125,7 +126,7 @@ $(document).ready(function(){
   $( "#helptext7" ).hide();
   $( "#helptext8" ).hide();
   $( "#helptext9" ).hide();
-  
+
 //Fade Ins
   $(".fade-in").fadeIn(2500);
   $( "#text1" ).delay(500).fadeIn(2500);
@@ -152,15 +153,20 @@ $(document).ready(function(){
     $( "#helptext3" ).delay(10000).fadeIn(2500);
     $( "#helptext4" ).delay(12000).fadeIn(2500);
     $( "#helptext5" ).delay(14000).fadeIn(2500).promise(checkOneHand);
+    if(checkOneHand = true) {
+      console.log("YES");
+    } else {
+
+    }
   });
   $("#helptext5").click(function(){
     $("#helptext9").fadeIn(5500);
     $( "#helptext1" ).delay(11000).fadeOut(2500);
     $( "#helptext2" ).delay(10000).fadeOut(2500);
-    $( "#helptext3" ).delay(80000).fadeOut(2500);
+    $( "#helptext3" ).delay(8000).fadeOut(2500);
     $( "#helptext4" ).delay(6000).fadeOut(2500);
     $( "#helptext5" ).delay(4000).fadeOut(2500);
-    $("#helptext9").delay(20000).fadeOut(5500);
+    $("#helptext9").delay(10000).fadeOut(5500);
   });
   $("#text8").click(function(){
     $("#text9").fadeIn(2500);
