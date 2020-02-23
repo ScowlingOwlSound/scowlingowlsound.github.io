@@ -65,9 +65,22 @@
   <script>
   function checkTwoHands() {
     var n = classPrediction.includes("Both Hands: 1.00");
+    if (n = true) {
+      $( "#helptext8" ).delay(4000).fadeIn(2500);
+      $( "#helptext9" ).delay(8000).fadeIn(2500);
+    } else {
+
+    }
   }
   function checkOneHand() {
     var m = classPrediction.includes("One Hand: 1.00");
+    if (m = true) {
+      $( "#helptext6" ).delay(4000).fadeIn(2500);
+      $( "#helptext7" ).delay(8000).fadeIn(2500);
+      $( "#helptext8" ).delay(10000).fadeIn(2500);
+    } else {
+
+    }
   }
   </script>
 
@@ -133,20 +146,20 @@ $(document).ready(function(){
           left: "+=900",
           marginLeft: "1.7in", opacity: 0.9 },2500);
     $("h1").delay(1000).fadeOut(2500);
-    $( "#helptext1" ).delay(8000).fadeIn(2500);
-    $( "#helptext2" ).delay(12000).fadeIn(2500);
-    $( "#helptext3" ).delay(15000).fadeIn(2500);
-    $( "#helptext4" ).delay(25000).fadeIn(2500);
-    $( "#helptext5" ).delay(28000).fadeIn(2500);
+    $( "#helptext1" ).delay(4000).fadeIn(2500);
+    $( "#helptext2" ).delay(8000).fadeIn(2500);
+    $( "#helptext3" ).delay(10000).fadeIn(2500);
+    $( "#helptext4" ).delay(12000).fadeIn(2500);
+    $( "#helptext5" ).delay(14000).fadeIn(2500).promise(checkOneHand);
   });
   $("#helptext5").click(function(){
     $("#helptext9").fadeIn(5500);
-    $( "#helptext1" ).delay(28000).fadeOut(2500);
-    $( "#helptext2" ).delay(25000).fadeOut(2500);
-    $( "#helptext3" ).delay(15000).fadeOut(2500);
-    $( "#helptext4" ).delay(12000).fadeOut(2500);
-    $( "#helptext5" ).delay(8000).fadeOut(2500);
-    $("#helptext9").delay(40000).fadeOut(5500);
+    $( "#helptext1" ).delay(11000).fadeOut(2500);
+    $( "#helptext2" ).delay(10000).fadeOut(2500);
+    $( "#helptext3" ).delay(80000).fadeOut(2500);
+    $( "#helptext4" ).delay(6000).fadeOut(2500);
+    $( "#helptext5" ).delay(4000).fadeOut(2500);
+    $("#helptext9").delay(20000).fadeOut(5500);
   });
   $("#text8").click(function(){
     $("#text9").fadeIn(2500);
