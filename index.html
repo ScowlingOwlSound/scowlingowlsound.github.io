@@ -125,6 +125,7 @@ $(document).ready(function(){
   $( "#helptext7" ).hide();
   $( "#helptext8" ).hide();
   $( "#helptext9" ).hide();
+  $( "#webcam-container").hide();
 //Fade Ins
   $(".fade-in").fadeIn(2500);
   $( "#text1" ).delay(500).fadeIn(2500);
@@ -150,7 +151,7 @@ $(document).ready(function(){
     $( "#helptext2" ).delay(8000).fadeIn(2500);
     $( "#helptext3" ).delay(10000).fadeIn(2500);
     $( "#helptext4" ).delay(12000).fadeIn(2500);
-    $( "#helptext5" ).delay(14000).fadeIn(2500).promise(checkOneHand);
+    $( "#helptext5" ).delay(14000).fadeIn(2500).promise(checkTwoHands);
   });
   $("#helptext5").click(function(){
     $("#helptext9").fadeIn(5500);
@@ -242,10 +243,10 @@ Please check your Audio Output and Speakers.</p>
   If at any time you find yourself unable to proceed, you can click the text to move on.</p>
 <p id="helptext2">When you hear a sound, you'll need to raise either one, or both your hands.</p>
 <p id="helptext3">Let's practice. </p>
-<p id="helptext4" onshow="alertSound.play()">When you hear this sound, raise one hand.</p>
+<p id="helptext4" onchange="alertSound.play()">When you hear this sound, raise one hand.</p>
 <p id="helptext5">...</p>
 <p id="helptext6">Great work!</p>
-<p id="helptext7" onshow="alertSound2.play()">What do you think you do when you hear this sound twice?</p>
+<p id="helptext7" onchange="alertSound2.play()">What do you think you do when you hear this sound twice?</p>
 <p id="helptext8">Well done.</p>
 <p id="helptext9">On with the show.</p>
 </center>
