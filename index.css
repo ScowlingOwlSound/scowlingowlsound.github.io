@@ -14,10 +14,10 @@ p {
   opacity:0.7;
   font-family: helvetica;
 }
-p:active {
+#text4.active {
   color:white;
 }
-p:visited{
+#text4.visited{
   colour:white;
 }
 button {
