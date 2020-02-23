@@ -22,6 +22,9 @@
           var alertSound2 = new Howl({
             src: ['alert2.wav']
           });
+          var success = new Howl ({
+            src: ['success.wav']
+          });
       </script>
   <!-- Tensorflow.js implementation -->
   <div id="webcam-container"></div>
@@ -123,13 +126,13 @@
             if(window.bh != 2) {
                window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
             } else {
+              success.play();
               window.bh = 0;
               twoPointFivePage();
             }
         }
         checkFlag();
 
-        console.log("YES");
       }
       function twoPointFivePage()
       {
@@ -138,11 +141,13 @@
         $( "#helptext8" ).delay(11000).fadeIn(2500);
         $("#helptext8").click(function(){
           twoPointNinePage();
+            success.play();
         });
         function checkFlag2() {
             if(window.bh != 1) {
                window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
             } else {
+              success.play();
               twoPointNinePage();
             }
         }
@@ -212,6 +217,7 @@
         $( "#cvtext3" ).delay(11000).fadeIn(2500);
         $("#cvtext3").click(function(){
           pageThreePart2();
+            success.play();
         });
 
         alertSound.play();
@@ -219,6 +225,7 @@
             if(window.bh != 2) {
                window.setTimeout(checkFlag3, 100); /* this checks the flag every 100 milliseconds*/
             } else {
+              success.play();
               pageThreePart2();
             }
         }
@@ -232,6 +239,7 @@
         $( "#cvtext6" ).delay(11000).fadeIn(2500);
         $("#cvtext6").click(function(){
           pageThreePart3();
+            success.play();
         });
         alertSound2.play();
         function checkFlag4() {
@@ -239,6 +247,7 @@
                window.setTimeout(checkFlag4, 100); /* this checks the flag every 100 milliseconds*/
             } else {
               window.bh = 0;
+                success.play();
               pageThreePart3();
             }
         }
@@ -252,7 +261,7 @@
       </script>
   </head>
   <body>
-    <!------------------- START OF PAGE ONE --------------------->
+    <!--- START OF PAGE ONE --------------------->
     <div class="fade-in" align="center">
       <br><br><br><br><br><br><br><br>
     <center><h1>David Weaver, for Art Processors.</h1>
