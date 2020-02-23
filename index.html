@@ -116,8 +116,8 @@
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
-        $( "#helptext5" ).delay(14000).fadeIn(2500);
-        alertSound.play();
+        $( "#helptext5" ).delay(14000).fadeIn(2500,alertSound.play();
+);
           $("#helptext5").click(function(){
             $( "#helptext6" ).delay(4000).fadeIn(2500);
             $( "#helptext7" ).delay(8000).fadeIn(2500);
@@ -140,12 +140,11 @@
       {
         $( "#helptext6" ).delay(4000).fadeIn(2500);
         $( "#helptext7" ).delay(8000).fadeIn(2500);
-        $( "#helptext8" ).delay(11000).fadeIn(2500);
+        $( "#helptext8" ).delay(11000).fadeIn(2500,alertSound.play(););
         $("#helptext8").click(function(){
           twoPointNinePage();
             success.play();
         });
-        alertSound.play();
 
         function checkFlag2() {
             if(window.bh != 1) {
@@ -218,13 +217,13 @@
         $(".btn2").fadeOut(4200);
         $( "#cvtext1" ).delay(4000).fadeIn(2500);
         $( "#cvtext2" ).delay(8000).fadeIn(2500);
-        $( "#cvtext3" ).delay(11000).fadeIn(2500);
+        $( "#cvtext3" ).delay(11000).fadeIn(2500, alertSound.play()).;
+;
 
         $("#cvtext3").click(function(){
           pageThreePart2();
             success.play();
         });
-        alertSound.play();
         function checkFlag3() {
             if(window.bh != 2) {
                window.setTimeout(checkFlag3, 100); /* this checks the flag every 100 milliseconds*/
@@ -320,7 +319,7 @@
       For this, I sourced the parts, cut, soldered and programmed Arduino components with accelerometers and gyroscopes to create a reactive component to the dancers. <br>
       This was piped over TouchOSC and a network to MaxMSP, where I developed the audio DSP for each dancer, dependant on the way they moved. <br>
       I worked closely with the Composer, Choreographer and HODs to ensure we delivered a tightly technical and creatively fulfilling product. <br>
-      We were nominated for a Sound and Technical Excellence Award, and this work has developed into an ongoing partnership with members of the <script>alertSound2.play()</script>modern dance community in Melbourne from Chunky Move and Transit Dancehouse. <br></p>
+      We were nominated for a Sound and Technical Excellence Award, and this work has developed into an ongoing partnership with members of the modern dance community in Melbourne from Chunky Move and Transit Dancehouse. <br></p>
     <p id="cvtext4">
       My work with the National Gallery of Victoria involved creating adaptive visuals and projection mapping for an event for the Victorian Government for the 50th Anniversary of the Battle of Long Tanh. <br>
       In this project, I made presentations at Government House, and worked with autonomy to ensure both a high standard of excellence and technical sophistication through redundancies and systems engineering. <br>
