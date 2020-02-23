@@ -116,7 +116,9 @@
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
-        $( "#helptext5" ).delay(14000).fadeIn(2500,alertSound.play());
+        $( "#helptext5" ).delay(14000).fadeIn("slow",function(){
+          alertSound.play();
+        });
           $("#helptext5").click(function(){
             $( "#helptext6" ).delay(4000).fadeIn(2500);
             $( "#helptext7" ).delay(8000).fadeIn(2500);
