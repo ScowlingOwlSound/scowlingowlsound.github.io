@@ -3,8 +3,6 @@
 <head>
   <!-- Tensorflow.js implementation -->
   <script>
-  var n;
-  var m;
   </script>
 
   <div id="webcam-container"></div>
@@ -53,8 +51,7 @@
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
               if(prediction[i].probability.toFixed(2) > 0.9){
-              n = classPrediction;
-              m = classPrediction;
+              console.log(classPrediction);
               //set the variables to values here.
             } else {
 
@@ -67,7 +64,7 @@
 
   <script>
   function checkTwoHands() {
-    n = classPrediction.includes("Both Hands: 1.00");
+    var n = classPrediction.includes("Both Hands: 1.00");
     if (n = true) {
       $( "#helptext8" ).delay(4000).fadeIn(2500);
       $( "#helptext9" ).delay(8000).fadeIn(2500);
