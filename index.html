@@ -6,17 +6,11 @@
   <!-- Howler Scripts -->
   <script src="./howler.js"></script>
   <script>
-      var buttonSound = new Howl({
-        src: ['buttonSound.wav']
-      });
-      var buttonInit = new Howl({
-        src: ['buttonInit.wav']
-      });
       var backgroundSound = new Howl({
         src: ['bgSound.wav']
       });
       var alertSound = new Howl({
-        src: ['alert.wav']
+        src: ['alertSound.wav']
       });
       var alertSound2 = new Howl({
         src: ['alert2.wav']
@@ -74,14 +68,21 @@ $(document).ready(function(){
     $( "#helptext3" ).delay(15000).fadeIn(2500);
     $( "#helptext4" ).delay(25000).fadeIn(2500);
     $( "#helptext5" ).delay(28000).fadeIn(2500);
+    if (classPrediction > 0.9)
+    {
+      $( "#helptext6" ).fadeIn(1500);
+    } else {
+      console.log("no");
+    }
   });
   $("#helptext5").click(function(){
-    $("#helptext6").fadeIn(2500);
-    $("#helptext7").fadeIn(3500);
-    $("#helptext8").fadeIn(4500);
     $("#helptext9").fadeIn(5500);
-
-
+    $( "#helptext1" ).delay(28000).fadeOut(2500);
+    $( "#helptext2" ).delay(25000).fadeOut(2500);
+    $( "#helptext3" ).delay(15000).fadeOut(2500);
+    $( "#helptext4" ).delay(12000).fadeOut(2500);
+    $( "#helptext5" ).delay(8000).fadeOut(2500);
+    $("#helptext9").delay(40000).fadeOut(5500);
   });
   $("#text8").click(function(){
     $("#text9").fadeIn(2500);
@@ -157,7 +158,7 @@ Please check your Audio Output and Speakers.</p>
   You'll miss out on some of the fancy stuff though.</p>
   <p id="text5">I hope you enjoy.</p>
   <!--Button for fading and continuing -->
-<button class="btn1" onclick="buttonSound.play(); init();">Continue.</button></center></div>
+<button class="btn1" onclick="alertSound.play(); init();">Continue.</button></center></div>
 <center><p id="helptext1">To read all of this cover letter, you'll need your hands. <br>
   If at any time you find yourself unable to proceed, you can click the text to move on.</p>
 <p id="helptext2">When you hear a sound, you'll need to raise either one, or both your hands.</p>
