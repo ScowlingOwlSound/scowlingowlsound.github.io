@@ -17,6 +17,7 @@ $(document).ready(function(){
   $( "#text8" ).hide();
   $( "#text9" ).hide();
   $( "#text10" ).hide();
+  $( ".btn1").hide();
   $(".fade-in").hide();
 
   $(".fade-in").fadeIn(2500);
@@ -73,8 +74,8 @@ $(document).ready(function(){
   <!-- Howler Scripts -->
   <script src="./howler.js"></script>
   <script>
-      var sound = new Howl({
-        src: ['sound.wav']
+      var buttonSound = new Howl({
+        src: ['buttonSound.wav']
       });
   </script>
 </head>
@@ -95,7 +96,7 @@ Please check your Audio Output and Speakers.</p>
   You'll miss out on some of the fancy stuff though.</p>
   <p id="text5">I hope you enjoy.</p>
   <!--Button for fading and continuing -->
-<button class="btn1" onclick="sound.play()">Continue.</button></center></div>
+<button class="btn1" onclick="buttonSound.play()">Continue.</button></center></div>
 
 <!-- Tensorflow.js implementation -->
 <script>
