@@ -47,36 +47,39 @@
               var classPrediction =
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
-              if(prediction[i].probability.toFixed(2) > 0.9){
-              //console.log(classPrediction);
+              if (classPrediction.includes("Both Hands: 1.00")){
+                    var bh = 1;
+                  } else {
+                    var bh = 0;
+                };
               //set the variables to values here.
-            } else {
-
-            }
           }
 
       }
-
-    </script>
-
-    <script>
-    function checkTwoHands() {
-      var n = classPrediction.includes("Both Hands: 1.00");
-      if (n = true) {
-        console.log("yes")
-      } else {
-        console.log("no")
-      }
-    }
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+      function checkTwo(){
+        if(window.bh == 1) {
+        $(".fade-in").fadeIn(2500);
+      } else {
+        console.log("no")
+      }
+    };
         $(document).ready(function(){
-          console.log("v1.2");
           init();
-          checkTwoHands();
+          $(".fade-in").hide();
+          console.log("v1.3");
+
+          checkTwo();
         });
-    </script>
+
+      </script>
   </head>
+  <body>
+    <div class="fade-in" align="center">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <center><h1>David Weaver, for Art Processors.</h1>
+  </body>
 </html>

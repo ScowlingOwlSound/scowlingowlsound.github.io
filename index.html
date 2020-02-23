@@ -32,9 +32,9 @@
           // append elements to the DOM
           document.getElementById("webcam-container").appendChild(webcam.canvas);
           labelContainer = document.getElementById("label-container");
-          for (let i = 0; i < maxPredictions; i++) { // and class labels
+          /*for (let i = 0; i < maxPredictions; i++) { // and class labels
               labelContainer.appendChild(document.createElement("div"));
-          }
+          }*/ //might not be needed
       }
 
       async function loop() {
@@ -50,38 +50,15 @@
               var classPrediction =
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
-              if(prediction[i].probability.toFixed(2) > 0.9){
-              //console.log(classPrediction);
-              //set the variables to values here.
-            } else {
-
-            }
-          }
+              if (classPrediction.includes("Both Hands: 1.00")){
+                    var bh = 1;
+                  } else {
+                    var bh = 0;
+                };
+              }
 
       }
 
-  </script>
-
-  <script>
-  function checkTwoHands() {
-    var n = classPrediction.includes("Both Hands: 1.00");
-    if (n = true) {
-      $( "#helptext8" ).delay(4000).fadeIn(2500);
-      $( "#helptext9" ).delay(8000).fadeIn(2500);
-    } else {
-
-    }
-  }
-  function checkOneHand() {
-    var m = classPrediction.includes("One Hand: 1.00");
-    if (m = true) {
-      $( "#helptext6" ).delay(4000).fadeIn(2500);
-      $( "#helptext7" ).delay(8000).fadeIn(2500);
-      $( "#helptext8" ).delay(10000).fadeIn(2500);
-    } else {
-
-    }
-  }
   </script>
 
   <!--Css Scripts -->
@@ -103,7 +80,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-  console.log("v1.2");
+  console.log("v1.4");
+  function checkTwo(){
+    if(window.bh == 1) {
+    $(".btn1").fadeIn(2500);
+  } else {
+    console.log("no")
+  }
+};
   //Fade everything out to start from black
   $( ".btn1").hide();
   $( "#text1" ).hide();
