@@ -22,6 +22,12 @@
           var alertSound2 = new Howl({
             src: ['alert2.wav']
           });
+          var alertSound3 = new Howl({
+            src: ['alert3.wav']
+          });
+          var alertSound4 = new Howl({
+            src: ['alert4.wav']
+          });
           var success = new Howl ({
             src: ['success.wav']
           });
@@ -112,7 +118,9 @@
               left: "+=900",
               marginLeft: "1.7in", opacity: 0.9 },2000);
         $("h1").delay(1000).fadeOut(2200);
-        $( "#helptext1" ).delay(6000).fadeIn(2500);
+        $( "#helptext1" ).delay(6000).fadeIn(2500,function(){
+          alert3.play();
+        });
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
@@ -162,7 +170,9 @@
       }
       function twoPointNinePage(){
         window.bh = 0;
-        $( "#helptext9" ).delay(4000).fadeIn(2500);
+        $( "#helptext9" ).delay(4000).fadeIn(2500,function(){
+          alert4.play();
+        });
         $( "#helptext10" ).delay(8000).fadeIn(2500);
         $( ".btn2").delay(4000).fadeIn(2500);
       }
@@ -218,7 +228,7 @@
         $("#helptext9").fadeOut(2400);
         $("#helptext10").fadeOut(2200);
         $(".btn2").fadeOut(4200);
-        $( "#cvtext1" ).delay(4000).fadeIn(2500);
+        $( "#cvtext1" ).delay(4000).fadeIn(2500,function(){alert3.play();});
         $( "#cvtext2" ).delay(8000).fadeIn(2500);
         $( "#cvtext3" ).delay(11000).fadeIn(2500, function(){
           alertSound.play();
