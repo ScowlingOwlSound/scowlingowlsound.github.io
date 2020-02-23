@@ -15,10 +15,11 @@
       var backgroundSound = new Howl({
         src: ['bgSound.wav']
       });
-      var bgSound = backgroundSound.play();
-
       var alertSound = new Howl({
         src: ['alert.wav']
+      });
+      var alertSound2 = new Howl({
+        src: ['alert2.wav']
       });
   </script>
 <!--Jquery Button Fades -->
@@ -70,15 +71,17 @@ $(document).ready(function(){
     $("h1").delay(1000).fadeOut(2500);
     $( "#helptext1" ).delay(8000).fadeIn(2500);
     $( "#helptext2" ).delay(12000).fadeIn(2500);
-    alertSound.play();
     $( "#helptext3" ).delay(15000).fadeIn(2500);
     $( "#helptext4" ).delay(25000).fadeIn(2500);
     $( "#helptext5" ).delay(28000).fadeIn(2500);
-    alertSound.play();
   });
-  $("#text6").click(function(){
-    $("#text7").fadeIn(2500);
-    $("#text8").fadeIn(3500);
+  $("#helptext5").click(function(){
+    $("#helptext6").fadeIn(2500);
+    $("#helptext7").fadeIn(3500);
+    $("#helptext8").fadeIn(4500);
+    $("#helptext9").fadeIn(5500);
+
+
   });
   $("#text8").click(function(){
     $("#text9").fadeIn(2500);
@@ -155,13 +158,14 @@ Please check your Audio Output and Speakers.</p>
   <p id="text5">I hope you enjoy.</p>
   <!--Button for fading and continuing -->
 <button class="btn1" onclick="buttonSound.play(); init();">Continue.</button></center></div>
-<center><p id="helptext1">To read all of this cover letter, you'll need your hands. </p>
-<p id="helptext2">When you hear this sound, you'll need to raise either one, or both your hands.</p>
+<center><p id="helptext1">To read all of this cover letter, you'll need your hands. <br>
+  If at any time you find yourself unable to proceed, you can click the text to move on.</p>
+<p id="helptext2">When you hear a sound, you'll need to raise either one, or both your hands.</p>
 <p id="helptext3">Let's practice. </p>
-<p id="helptext4">When you hear this sound, raise a hand.</p>
+<p id="helptext4" onshow="alertSound.play()">When you hear this sound, raise one hand.</p>
 <p id="helptext5">...</p>
 <p id="helptext6">Great work!</p>
-<p id="helptext7">What do you think you do when you hear this sound twice?</p>
+<p id="helptext7" onshow="alertSound2.play()">What do you think you do when you hear this sound twice?</p>
 <p id="helptext8">Well done.</p>
 <p id="helptext9">On with the show.</p>
 </center>
