@@ -49,7 +49,6 @@ $(document).ready(function(){
   $( ".btn1" ).delay(2500).fadeIn(2500);
 //Button click functions
   $(".btn1").click(function(){
-
     $("#text1").fadeOut(2500);
     $("#text2").fadeOut(2800);
     $("#text3").fadeOut(3000);
@@ -66,7 +65,7 @@ $(document).ready(function(){
     alertSound.play();
     $( "#helptext3" ).delay(15000).fadeIn(2500);
 
-    $( "#text6" ).delay(5000).fadeIn(2500);
+    //$( "#text6" ).delay(5000).fadeIn(2500);
   });
   $("#text6").click(function(){
     $("#text7").fadeIn(2500);
@@ -126,7 +125,7 @@ Please check your Audio Output and Speakers.</p>
   You'll miss out on some of the fancy stuff though.</p>
   <p id="text5">I hope you enjoy.</p>
   <!--Button for fading and continuing -->
-<button class="btn1" onclick="buttonSound.play()" onclick="init()">Continue.</button></center></div>
+<button class="btn1" onclick="buttonSound.play(); init();">Continue.</button></center></div>
 <center><p id="helptext1">To read all of this cover letter, you'll need your hands. </center></p>
 <center><p id="helptext2">When you hear this sound, you'll need to raise either one, or both your hands.</center></p>
 <center><p id="helptext3">Let's practice. When you hear this sound, raise a hand.</p></center>
