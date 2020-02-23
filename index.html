@@ -31,6 +31,9 @@
           var success = new Howl ({
             src: ['success.wav']
           });
+          var success2 = new Howl ({
+            src: ['success2.wav']
+          });
       </script>
   <!-- Tensorflow.js implementation -->
   <div id="webcam-container"></div>
@@ -123,14 +126,13 @@
         });
         $( "#helptext2" ).delay(8000).fadeIn(2500);
         $( "#helptext3" ).delay(10000).fadeIn(2500);
-        $( "#helptext4" ).delay(12000).fadeIn(2500);
-        $( "#helptext5" ).delay(14000).fadeIn(2500,function(){
-          alertSound.play();
+        $( "#helptext4" ).delay(12000).fadeIn(2500, function(){alertSound.play()});
+        $( "#helptext5" ).delay(14000).fadeIn(2500)
         });
           $("#helptext5").click(function(){
-            $( "#helptext6" ).delay(4000).fadeIn(2500);
-            $( "#helptext7" ).delay(8000).fadeIn(2500);
-            $( "#helptext8" ).delay(11000).fadeIn(2500);
+            $( "#helptext6" ).delay(2000).fadeIn(2500);
+            $( "#helptext7" ).delay(4000).fadeIn(2500);
+            $( "#helptext8" ).delay(6000).fadeIn(2500);
               success.play();
           });
         function checkFlag() {
@@ -148,9 +150,8 @@
       function twoPointFivePage()
       {
         $( "#helptext6" ).delay(4000).fadeIn(2500);
-        $( "#helptext7" ).delay(8000).fadeIn(2500);
-        $( "#helptext8" ).delay(11000).fadeIn(2500,function(){
-          alertSound.play();
+        $( "#helptext7" ).delay(8000).fadeIn(2500,function(){alertSound2.play()});
+        $( "#helptext8" ).delay(11000).fadeIn(2500);
         });
         $("#helptext8").click(function(){
           twoPointNinePage();
@@ -161,7 +162,7 @@
             if(window.bh != 1) {
                window.setTimeout(checkFlag2, 100); /* this checks the flag every 100 milliseconds*/
             } else {
-              success.play();
+              success2.play();
               twoPointNinePage();
             }
         }
