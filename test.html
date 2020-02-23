@@ -10,7 +10,6 @@
       <style>
 
       </style>
-
     <!-- Howler Scripts -->
       <script src="./howler.js"></script>
       <script>
@@ -34,7 +33,7 @@
       const URL = "https://teachablemachine.withgoogle.com/models/urcdnqNk/";
 
       let model, webcam, labelContainer, maxPredictions;
-
+      var bh = 2;
       // Load the image model and setup the webcam
       async function init() {
           const modelURL = URL + "model.json";
@@ -63,16 +62,15 @@
       }
       // run the webcam image through the image model
       async function predict() {
-        var bh;
           const prediction = await model.predict(webcam.canvas);
           for (let i = 0; i < maxPredictions; i++) {
               var classPrediction =
                   prediction[i].className + ": " + prediction[i].probability.toFixed(2);
               labelContainer.childNodes[i].innerHTML = classPrediction;
               if (classPrediction.includes("Both Hands: 1.00")){
-                    var bh = 0;
+                    window.bh = 1;
                   } else if (classPrediction.includes("No Hands: 1.00")) {
-                    var bh = 1;
+                    window.bh = 0;
                 };
           }
       }
@@ -80,15 +78,7 @@
 <!--Jquery fades -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      function checkMe()
-      {
-        if (window.bh = 0) {
-          console.log(window.bh);
-        }
-        else {
-          console.log("success!");
-        }
-      }
+
       function firstPage()
       {
         //Fade Ins
@@ -118,16 +108,41 @@
         $( "#helptext3" ).delay(10000).fadeIn(2500);
         $( "#helptext4" ).delay(12000).fadeIn(2500);
         $( "#helptext5" ).delay(14000).fadeIn(2500);
-        while (window.bh == 0)
-        {
-          checkMe();
+        function checkFlag() {
+            if(window.bh != 1) {
+               window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+            } else {
+              twoPointFivePage();
+            }
         }
+        checkFlag();
+
+        console.log("YES");
+      }
+      function twoPointFivePage()
+      {
+        window.bh = 0;
+        $( "#helptext6" ).delay(4000).fadeIn(2500);
+        $( "#helptext7" ).delay(8000).fadeIn(2500);
+        function checkFlag2() {
+            if(window.bh != 1) {
+               window.setTimeout(checkFlag, 100); /* this checks the flag every 100 milliseconds*/
+            } else {
+              threePage();
+            }
+            checkFlag2();
+        }
+      }
+      function threePage(){
+        $( "#helptext8" ).delay(4000).fadeIn(2500);
+        $( "#helptext9" ).delay(8000).fadeIn(2500);
       }
         $(document).ready(function(){
           init();
           console.log("1.9");
           //Fade everything out to start from black
           $( ".btn1").hide();
+          $( ".btn2").hide();
           $( "#text1" ).hide();
           $( "#text2" ).hide();
           $( "#text3" ).hide();
@@ -185,8 +200,29 @@
     <p id="helptext7" onchange="alertSound2.play()">What do you think you do when you hear this sound twice?</p>
     <p id="helptext8">Well done.</p>
     <p id="helptext9">On with the show.</p>
+    <button class="btn2" onclick="alertSound.play(); thirdPage();">Continue.</button></center></div>
+
     </center>
     <!------------------- END OF PAGE TWO --------------------->
+    <!------------------- START OF PAGE THREE --------------------->
+
+    <p id="text6">
+      I'm writing to you in interest of the position for Digital Producer at Arts Processors.<br>
+      I’ve greatly enjoyed some of your work at MONA, and have always been interested in contributing to the design philosophy you hold with such high esteem. </p>
+    <p id="text7">
+      As a multidisciplinary artist, I’ve contributed audiovisual works to Melbourne Fringe Festival, the National Gallery of Victoria and Music Festivals (Panacea & Tilde Festival), in varying capacities. <br></p>
+    <p id="text8">
+      For Melbourne Fringe Festival, I produced the live electronics for ‘Eyes Wide Open’, a 40 minute interactive dance piece. <br>
+      For this, I sourced the parts, cut, soldered and programmed Arduino components with accelerometers and gyroscopes to create a reactive component to the dancers. <br>
+      This was piped over TouchOSC and a network to MaxMSP, where I developed the audio DSP for each dancer, dependant on the way they moved. <br>
+      I worked closely with the Composer, Choreographer and HODs to ensure we delivered a tightly technical and creatively fulfilling product. <br>
+      We were nominated for a Sound and Technical Excellence Award, and this work has developed into an ongoing partnership with members of the modern dance community in Melbourne from Chunky Move and Transit Dancehouse. <br></p>
+    <p id="text9">
+      My work with the National Gallery of Victoria involved creating adaptive visuals and projection mapping for an event for the Victorian Government for the 50th Anniversary of the Battle of Long Tanh. <br>
+      In this project, I made presentations at Government House, and worked with autonomy to ensure both a high standard of excellence and technical sophistication through redundancies and systems engineering. <br>
+      This work was presented to over 300 government officials and members of the public.
+
+      <!------------------- END OF PAGE TWO --------------------->
 
   </body>
 </html>
