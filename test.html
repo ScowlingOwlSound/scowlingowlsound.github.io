@@ -21,7 +21,7 @@
           maxPredictions = model.getTotalClasses();
 
           const flip = true; // flip the webcam
-          webcam = new tmImage.Webcam(1920, 1080, flip); // width, height, flip
+          webcam = new tmImage.Webcam(640, 480, flip); // width, height, flip
           await webcam.setup(); // request access to the webcam
           await webcam.play();
           window.requestAnimationFrame(loop);
@@ -75,6 +75,7 @@
         $(document).ready(function(){
           console.log("v1.2");
           init();
+          checkTwoHands();
         });
     </script>
   </head>
