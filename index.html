@@ -5,25 +5,41 @@
     <script src="./howler/howler.js"/></script>
     <!-- Import for Fonts -->
     <link rel="stylesheet" href="./index.css">
+    <!--Jquery Import --> <!--TODO import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Imports for other libraries -->
+
+    <!-- Howler Scripts -->
+      <script>
+        var bgSound1 = new Howl({
+          src: ['./music/bgMusic1.wav']
+        });
+      </script>
+
+    <!-- Jquery Fades -->
+    <script>
+    $ ("#explore").click(function(){
+        $("#explore").fadeOut("slow");
+        $("#getStarted").fadeIn("slow");
+        playBg1.play;
+    });
+
+    </script>
+
+
   </head>
 <body>
-  <script>
-    var bgSound1 = new Howl({
-      src: ['./music/bgMusic1.wav']
-    });
-    function playBg1() {
-      playBg1.play;
-    }
-</script>
 
-  <center>
+  <center><br><br>
     <h1>DnD Dialog Machine</h1><br>
     <input type="image" id="explore" alt="Explore"
-       src="./graphics/icons/viking_hat.png" width="400" height="400" function("playBg1()")>
-    <p>Welcome to the Dnd Dialog Machine.<br>
-    You'll be able to use this Dialogue Machine to construct engaging and exciting experiences with your Virtual Dungeon Master.<br>
-    Select a Campaign below to get started.</p>
+       src="./graphics/icons/viking_hat.png" width="400" height="400")></input>
+
+    <p id="welcomeText1">Welcome to the Dnd Dialog Machine.<br>
+    You'll be able to use this application to communicate with your Virtual Dungeon Master.<br>
+    You'll have access to all of your usual commands, like look, go left, speak to innkeeper and much, much more.</p>
+
+    <p id="getStarted"> Select a Campaign below to get started.</p>
   </center>
 </body>
 </html>
