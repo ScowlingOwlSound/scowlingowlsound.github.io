@@ -15,7 +15,18 @@
           src: ['./music/bgMusic1.wav']
         });
       </script>
+    <!-- Initial Page Wiper -->
+    <script>
+    $(document).ready(function(){
+      $("#getStarted").hide();
+      $("#welcomeText1").hide();
+      $("h1").hide();
+      $("#explore").hide();
+      $("#explore").fadeIn(3000);
 
+
+    })
+  </script>
     <!-- Jquery Fades -->
     <script>
     $ ("#explore").click(function(){
@@ -32,9 +43,10 @@
 
   <center><br><br>
     <h1>DnD Dialog Machine</h1><br>
-    <input type="image" id="explore" alt="Explore"
+    <div class="startingIconContainer">
+      <input type="image" id="explore" alt="Explore"
        src="./graphics/icons/viking_hat.png" width="400" height="400")></input>
-
+     </div>
     <p id="welcomeText1">Welcome to the Dnd Dialog Machine.<br>
     You'll be able to use this application to communicate with your Virtual Dungeon Master.<br>
     You'll have access to all of your usual commands, like look, go left, speak to innkeeper and much, much more.</p>

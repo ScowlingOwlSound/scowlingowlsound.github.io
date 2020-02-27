@@ -18,6 +18,9 @@ body {
   background-color: SandyBrown;
 }
 
-#explore {
-
+.startingIconContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
