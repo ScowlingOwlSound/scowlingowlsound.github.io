@@ -1,0 +1,23 @@
+@font-face {
+    font-family: BlackBaron;
+    src: url("./graphics/fonts/BlackBaronGothic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: BlackBaron;
+    font-weight: bold;
+    src: url("./graphics/fonts/BlackBaronGothic.ttf") format("truetype");
+}
+
+h1 {
+  font-family:BlackBaron;
+  font-size:60px;
+}
+
+body {
+  background-image: url("./graphics/backgrounds/forest1.jpg");
+}
+
+#explore {
+
+}
