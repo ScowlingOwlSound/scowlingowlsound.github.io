@@ -20,19 +20,38 @@
     $(document).ready(function(){
       $("#getStarted").hide();
       $("#welcomeText1").hide();
+      $("#campaign1").hide();
+      $("#campaign2").hide();
+
       $("h1").hide();
       $("#explore").hide();
-      $("#explore").fadeIn(3000);
+      $("#explore").fadeIn(1000);
+      $("h1").fadeIn(1000);
+
     })
   </script>
     <!-- Jquery Fades -->
     <script>
-    $ ("#explore").click(function(){
-        $("#explore").fadeOut("slow");
-        $("#getStarted").fadeIn("slow");
-        bgSound1.play;
-    });
-
+    //Explore Button Clicked at start -->
+    function onClickExplore(){
+      $("#explore").fadeOut("slow");
+      $("h1").delay(500).fadeOut("slow");
+      $("#getStarted").delay(2000).fadeIn("slow");
+      $("#campaign1").delay(1000).fadeIn("slow");
+      $("#campaign2").delay(1500).fadeIn("slow");
+      bgSound1.play;
+    }
+    //Campaign 1 Selected.
+    function onClickCampaign1(){
+      $("#campaign2").fadeOut("slow");
+      $("p").delay(500).fadeOut("slow");
+      //play a sound effect
+    }
+    function onClickCampaign2(){
+      $("#campaign1").fadeOut("slow");
+      $("p").delay(500).fadeOut("slow");
+      //play a sound effect
+    }
     </script>
 
 
@@ -43,13 +62,21 @@
     <h1>DnD Dialog Machine</h1><br>
     <div class="startingIconContainer">
       <input type="image" id="explore" alt="Explore"
-       src="./graphics/icons/viking_hat.png" width="400" height="400")></input>
+       src="./graphics/icons/viking_hat.png" width="400" height="400" onclick="onClickExplore()")></input>
      </div>
     <p id="welcomeText1">Welcome to the Dnd Dialog Machine.<br>
     You'll be able to use this application to communicate with your Virtual Dungeon Master.<br>
     You'll have access to all of your usual commands, like look, go left, speak to innkeeper and much, much more.</p>
+<!-- Campaign Page -->
+    <p id="getStarted"> Select a Campaign below to get started.</p></center>
+    <div class="startingCampaign1">
+      <input type="image" id="campaign1" alt="Campaign1"
+       src="./graphics/icons/viking_axe.png" width="300" height="300" onclick="onClickCampaign1()")></input>
+   </div>
+     <div class="startingCampaign2">
+       <input type="image" id="campaign2" alt="Campaign2"
+        src="./graphics/icons/viking_meat.png" width="300" height="300" onclick="onClickCampaign2()")></input>
+    </div>
 
-    <p id="getStarted"> Select a Campaign below to get started.</p>
-  </center>
 </body>
 </html>
